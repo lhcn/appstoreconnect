@@ -14,6 +14,8 @@ export namespace v1 {
     export const financeReports = routes.financeReports
     export const token = auth.token
     export const tokenAsync = auth.tokenAsync
+    export const devices = routes.devices
+    export const profiles = routes.profiles
 }
 
 export type AppType =

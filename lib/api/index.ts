@@ -99,7 +99,7 @@ async function call<T>(
 
     const { body: responseBody, ...response } = rawResponse
 
-    if (!body) {
+    if (!body || rawResponse.statusCode == 204) {
         return (undefined as unknown) as T
     } else if (options.contentType === ContentType.GZIP) {
         return (body as unknown) as T
@@ -212,6 +212,5 @@ function body(object: object | undefined): string | undefined {
         return
     }
     const json = JSON.stringify(object)
-    console.log(json)
     return json
 }
