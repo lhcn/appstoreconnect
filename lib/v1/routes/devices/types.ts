@@ -38,11 +38,11 @@ export interface ListDeviceQuery {
         devices: DeviceReturnFields[]
     }
     filter?: {
-        id: string[]
-        name: string[]
-        platform: BundleIdPlatform[]
-        status: DeviceStatus[]
-        uuid: string[]
+        id?: string[]
+        name?: string[]
+        platform?: BundleIdPlatform[]
+        status?: DeviceStatus[]
+        uuid?: string[]
     }
 
     limit: number

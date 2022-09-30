@@ -47,9 +47,9 @@ export interface ListProfileQuery {
         bundleIds: string[] // Possible values: bundleIdCapabilities, identifier, name, platform, profiles, seedId
     }
     filter?: {
-        id: string[]
+        id?: string[]
         name: string[]
-        profileState: string[] // Possible values: ACTIVE, INVALID
+        profileState?: string[] // Possible values: ACTIVE, INVALID
     }
     include: string[] // Possible values: bundleId, certificates, devices
 
